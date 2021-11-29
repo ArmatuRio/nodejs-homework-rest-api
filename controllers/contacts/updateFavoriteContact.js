@@ -2,7 +2,7 @@ const { NotFound } = require('http-errors')
 // const contactsOperations = require('../../models/contacts')
 const { Contact } = require('../../models')
 
-const updateFavoriteContact = async (req, res,) => {
+const updateStatusContact = async (req, res,) => {
   const { id } = req.params
   const { favorite } = req.body
   const result = await Contact.findByIdAndUpdate(id, { favorite }, { new: true })
@@ -18,4 +18,4 @@ const updateFavoriteContact = async (req, res,) => {
   })
 }
 
-module.exports = updateFavoriteContact
+module.exports = updateStatusContact

@@ -15,7 +15,7 @@ router.post('/', validation(joiSchema), ctrlWrapper(ctrl.add))
 
 router.put('/:id', validation(joiSchema), ctrlWrapper(ctrl.updateById))
 
-router.patch('/:id/favorite', validation(updateFavoriteJoiSchema), ctrlWrapper(ctrl.updateFavoriteContact))
+router.patch('/:id/favorite', validation(updateFavoriteJoiSchema), ctrlWrapper(ctrl.updateStatusContact))
 
 router.delete('/:id', ctrlWrapper(ctrl.removeById))
 
