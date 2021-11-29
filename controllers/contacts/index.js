@@ -2,12 +2,14 @@ const getAll = require('./getAll')
 const getById = require('./getById')
 const add = require('./add')
 const updateById = require('./updateById')
-const removeById = require('./removeById.js')
+const removeById = require('./removeById')
+const updateFavoriteContact = require('./updateFavoriteContact')
 
 module.exports = {
   getAll,
   getById,
   add,
   updateById,
-  removeById
+  removeById,
+  updateFavoriteContact
 }
