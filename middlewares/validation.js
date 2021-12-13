@@ -1,12 +1,15 @@
 const validation = (schema) => {
-  return (req, res, next) => {
+  return async (req, res, next) => {
     const { error } = schema.validate(req.body)
     if (error) {
-      error.status = 400
-      next(error)
+      res.status(400).json({
+        status: 'error',
+        code: 400,
+        message: error.message,
+      })
+      return
     }
-    next(error)
+    next()
   }
 }
-
 module.exports = validation
